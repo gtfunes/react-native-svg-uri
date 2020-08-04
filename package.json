@@ -1,39 +1,39 @@
 {
-  "name": "react-native-fast-svg",
-  "version": "1.0.3",
-  "description": "Render an SVG Images from url (using react-native-svg-uri), plus caching",
-  "main": "index.js",
-  "scripts": {
-    "test": "./node_modules/mocha/bin/mocha --compilers js:babel-core/register"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/izzisolomon/react-native-svg-uri.git"
-  },
-  "keywords": [
-    "react-native",
-    "svg",
-    "url",
-    "uri",
-    "cache",
-    "http"
-  ],
-  "author": "Matias Cortes",
-  "license": "ISC",
-  "dependencies": {
-    "xmldom": "^0.1.22"
-  },
-  "peerDependencies": {
-    "react-native-svg": "^5.3.0"
-  },
-  "bugs": {
-    "url": "https://github.com/izzisolomon/react-native-svg-uri/issues"
-  },
-  "homepage": "https://github.com/izzisolomon/react-native-svg-uri#readme",
-  "devDependencies": {
-    "babel-core": "^6.24.1",
-    "babel-preset-react-native": "^2.1.0",
-    "chai": "^3.5.0",
-    "mocha": "^3.2.0"
-  }
+    "name": "react-native-fast-svg",
+    "version": "1.0.4",
+    "description": "Render an SVG Images from url (using react-native-svg-uri), plus caching",
+    "main": "index.js",
+    "scripts": {
+        "test": "./node_modules/mocha/bin/mocha --compilers js:babel-core/register"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/gtfunes/react-native-svg-uri.git"
+    },
+    "keywords": [
+        "react-native",
+        "svg",
+        "url",
+        "uri",
+        "cache",
+        "http"
+    ],
+    "author": "Gastón Funes",
+    "license": "ISC",
+    "dependencies": {
+        "xmldom": "^0.1.22"
+    },
+    "peerDependencies": {
+        "react-native-svg": "^5.3.0"
+    },
+    "bugs": {
+        "url": "https://github.com/gtfunes/react-native-svg-uri/issues"
+    },
+    "homepage": "https://github.com/gtfunes/react-native-svg-uri#readme",
+    "devDependencies": {
+        "babel-core": "^6.24.1",
+        "babel-preset-react-native": "^2.1.0",
+        "chai": "^3.5.0",
+        "mocha": "^3.2.0"
+    }
 }
