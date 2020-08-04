@@ -1,10 +1,10 @@
 # react-native-fast-svg
+
 Render SVG images in React Native using a URL or a static file.
 
 SVG's rendered from a url are cached using react native's Async Storage.
 
 Forked from 'react-native-svg-uri'.
-
 
 Install library from `npm`
 
@@ -20,13 +20,15 @@ react-native link react-native-svg # not react-native-fast-svg !!!
 
 ## Props
 
-| Prop | Type | Default | Note |
-|---|---|---|---|
-| `source` | `ImageSource` |  | Same kind of `source` prop that `<Image />` component has
-| `svgXmlData` | `String` |  | You can pass the SVG as String directly
-| `fill` | `Color` |  | Overrides all fill attributes of the svg file
-| `fillAll` | `Boolean` | false | Adds the fill color to the entire svg object
-|`noCache`|`Booleean`| false | will not cache this particular SVG if true
+| Prop         | Type          | Default | Note                                                                         |
+| ------------ | ------------- | ------- | ---------------------------------------------------------------------------- |
+| `source`     | `ImageSource` |         | Same kind of `source` prop that `<Image />` component has                    |
+| `svgXmlData` | `String`      |         | You can pass the SVG as String directly                                      |
+| `fill`       | `Color`       |         | Overrides all fill attributes of the svg file                                |
+| `fillAll`    | `Boolean`     | false   | Adds the fill color to the entire svg object                                 |
+| `noCache`    | `Booleean`    | false   | Will not cache this particular SVG if true                                   |
+| `onLoad`     | `Function`    |         | Function called after a successful SVG fetch from a remote source            |
+| `onError`    | `Function`    |         | Function called is there is an error when fetching SVG data or during render |
 
 ## Known Bugs
 
@@ -39,14 +41,16 @@ react-native link react-native-svg # not react-native-fast-svg !!!
 Here's a simple example:
 
 ```javascript
-import SvgUri from 'react-native-fast-svg';
+import SvgUri from "react-native-fast-svg";
 
 const TestSvgUri = () => (
   <View style={styles.container}>
     <SvgUri
       width="200"
       height="200"
-      source={{uri:'http://thenewcode.com/assets/images/thumbnails/homer-simpson.svg'}}
+      source={{
+        uri: "http://thenewcode.com/assets/images/thumbnails/homer-simpson.svg",
+      }}
     />
   </View>
 );
@@ -55,7 +59,7 @@ const TestSvgUri = () => (
 or a static file
 
 ```javascript
-<SvgUri width="200" height="200" source={require('./img/homer.svg')} />
+<SvgUri width="200" height="200" source={require("./img/homer.svg")} />
 ```
 
 This will render:
@@ -63,5 +67,6 @@ This will render:
 ![Component example](./screenshoots/sample.png)
 
 ## Testing
+
 1. Make sure you have installed dependencies with `npm i`
 2. Run tests with `npm test`
